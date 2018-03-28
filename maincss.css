@@ -113,27 +113,15 @@ font-family: "Trebuchet MS";
 font-size:15px;
 background:url('http://cdn.wonderfulengineering.com/wp-content/uploads/2014/07/Hi-Tech-Wallpaper-12.jpg');
 background-repeat: no-repeat;
+background-size:100%;
 }
-iframe{
-height:300px;
-width:400px;
-margin-left:-100px;
-margin-top:200px;
-}
-#showOP{
-border:none;
-float:left;
-position:relative;
-width:200px;
-height:100px;
-color: black;
-font-size: 15px;
-background:black;
-}
-#showOP:active , #showOP:hover {
-opacity: 0.5;
-}
-#output{
 
-
+#myHref{
+margin-top:100px;
+decoration:none;
+padding:10px;
+background-color: lightblue;
+}
+#include{
+margin-top:10px;
 }

@@ -6,7 +6,8 @@ remote.avatar = "https://developers.viber.com/images/apps/apiai-icon.png";
 var SESSIONID=generateUUID();
 var accessToken = "3c44974b43934bbdb1fdc030b17df30e";
 var baseUrl = "https://api.api.ai/v1/";
-
+var Opurl="https://nwave-ideabot-flask-webhook-p.herokuapp.com/getop/";
+var url=Opurl+SESSIONID;
 function formatTime(date) {
     var hours = date.getHours();
     var minutes = date.getMinutes();
@@ -96,3 +97,11 @@ function generateUUID() { // Public Domain/MIT
         return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
     });
 }
+
+$(document).ready(function(){
+    $("#myHref").click(function(event){
+        document.getElementById("myData").setAttribute('data',"D:/Guna/POCs/ML/nwave-UI/output.html");
+	document.getElementById("myHref").setAttribute(,"");
+	return false;
+    });
+});

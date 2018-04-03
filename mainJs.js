@@ -111,14 +111,14 @@ function generateUUID() { // Public Domain/MIT
 
 $(document).ready(function(){
     $("#myHref").click(function(event){
-        document.getElementById("myData").setAttribute('data','D:/Guna/POCs/ML/nwave-UI/output.html');
+        document.getElementById("myData").setAttribute('data',url);
 	$("#myHref").hide();
 	$("#closeOp").show();
 	return false;
     });
 });
 $("#closeOp").click(function(){
-	document.getElementById("myData").setAttribute('data','D:/Guna/POCs/ML/nwave-UI/output.html');
+	document.getElementById("myData").setAttribute('data',url);
 	$("#closeOp").hide();	
 	$("#myData").hide();
 	$("#myHref").show();

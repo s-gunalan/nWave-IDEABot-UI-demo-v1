@@ -110,7 +110,7 @@ function generateUUID() { // Public Domain/MIT
 }
 $(document).ready(function(){
     $("#myHref").click(function(event){
-        document.getElementById("myData").setAttribute('data','D:/Guna/POCs/ML/nwave-UI/output.html');
+        document.getElementById("myData").setAttribute('data',url);
 	$("#myData").show();
 	$("#myHref").hide();
 	$("#closeOp").show();

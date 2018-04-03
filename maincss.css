@@ -140,36 +140,52 @@ overflow:hidden;
 
 #myHref{
 z-index:1;
-decoration:none;
+text-decoration:none;
 padding:40px;
 position:relative;
-top:250px;
-left:25%;
+top:350px;
+left:17%;
 width:100px;
 height:100px;
-background:black;
+font-size:25px;
+text-align:left;
+background:transparent;
 }
 #include{
 position:absolute;
-left:5%;
-top:30%;
+left:2%;
+top:5%;
+alpha:opacity(0.2);
 }
-h2{
+h1,h2,h3,h4,h5,h6{
 position:absolute;
-top:150px;
-left:10%;
+float:right;
+top:10px;
+right:05%;
+text-align:right;
+}
+h4{
+transform: rotate(-10deg);
+top:22%;
+right:20%;
+}
+h3{
+text-align:center;
+top:25%;
 }
 #closeOp{
+cursor: pointer;
 z-index:2;
 position:absolute;
-left:55%;
-top:100px;
+left:60%;
+top:25px;
 opacity:0.7;
 }
 #closeOp:active,#closeOp:hover{
 opacity:1;
+  cursor: pointer;
 background:grey;
-width:70px;
+text-decoration:none;
 }
 
 

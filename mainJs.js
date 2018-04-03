@@ -108,19 +108,18 @@ function generateUUID() { // Public Domain/MIT
         return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
     });
 }
-
 $(document).ready(function(){
     $("#myHref").click(function(event){
-        document.getElementById("myData").setAttribute('data',url);
+        document.getElementById("myData").setAttribute('data','D:/Guna/POCs/ML/nwave-UI/output.html');
+	$("#myData").show();
 	$("#myHref").hide();
 	$("#closeOp").show();
 	return false;
     });
 });
 $("#closeOp").click(function(){
-	document.getElementById("myData").setAttribute('data',url);
+	//document.getElementById("myData").setAttribute('data',"");
 	$("#closeOp").hide();	
 	$("#myData").hide();
 	$("#myHref").show();
 });
-

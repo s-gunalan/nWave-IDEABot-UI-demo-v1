@@ -25,7 +25,7 @@ function insertChat(who, text){
     
      if (who == "local"){
         
-         control = '<li style="width:80%;align:right">' +
+         control = '<li style="width:100%;float:right;">' +
                         '<div class="msj-rta macro">' +
                             '<div class="text text-r">' +
                                 '<p>'+text+'</p>' +
@@ -33,7 +33,7 @@ function insertChat(who, text){
                             '</div>' +                                                       
                   '</li>';                   
     }else{
-        control = '<li style="width:80%;align:right">' +
+        control = '<li style="width:100%;align:right;">' +
                         '<div class="msj macro">' +
                             '<div class="text text-l">' +
                                 '<p>'+ text +'</p>' +
@@ -48,9 +48,19 @@ function insertChat(who, text){
 }
 
 $("#chat-panel").on('click',function(){
-    $(".innerframe").toggle();
+var framewidth = $("#frame").width();
+var op="";
+if(framewidth > 150 ){
+	framewidth = "125";
+	op="0.1";
+}else {
+	framewidth = "370";
+	op="1";
+}
+$(".innerframe").animate({height: 'toggle',opacity: op});
+$('#frame').animate({ width: framewidth,background:"black"});
 });
-
+ 
 function resetChat(){
     $("#messages").empty();
 }
@@ -78,7 +88,8 @@ function queryBot(text) {
                     "Authorization": "Bearer " + accessToken
                 },
                 data: JSON.stringify({ query: text, lang: "en", sessionId: SESSIONID }),
-                success: function(data) {
+                
+		success: function(data) {
                     insertChat("remote",data.result.fulfillment.speech);
                 },
                 error: function() {
@@ -100,7 +111,16 @@ function generateUUID() { // Public Domain/MIT
 
 $(document).ready(function(){
     $("#myHref").click(function(event){
-        document.getElementById("myData").setAttribute('data',url);
+        document.getElementById("myData").setAttribute('data','D:/Guna/POCs/ML/nwave-UI/output.html');
+	$("#myHref").hide();
+	$("#closeOp").show();
 	return false;
     });
 });
+$("#closeOp").click(function(){
+	document.getElementById("myData").setAttribute('data','D:/Guna/POCs/ML/nwave-UI/output.html');
+	$("#closeOp").hide();	
+	$("#myData").hide();
+	$("#myHref").show();
+});
+

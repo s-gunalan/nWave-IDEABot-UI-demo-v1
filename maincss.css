@@ -1,19 +1,19 @@
 body{
 }
 .mytext{
-    border:0;padding:10px;background:#001010;
+    border:0;padding:10px;background:#001010;text-align:right;
 }
 .text{
-    width:75%;display:flex;flex-direction:column;float:left;
+    width:100%;display:flex;flex-direction:column;
 }
 .text > p:first-of-type{
-    width:100%;margin-top:0;margin-bottom:auto;line-height: 15px;font-size: 15px;float:left;
+    width:100%;margin-top:5px;margin-bottom:auto;line-height: 15px;font-size: 15px;
 }
 .text > p:last-of-type{
-    width:100%;text-align:left;color:black;margin-bottom:-7px;margin-top:auto;
+    width:100%;text-align:left;color:black;margin-bottom:-7px;margin-top:auto;text-align:right;
 }
 .text-l{
-    float:left;padding-right:10px;
+    float:right;padding-right:10px;
 }        
 .text-r{
     float:right;padding-left:10px;
@@ -22,7 +22,7 @@ body{
     margin-top:5px;width:85%;border-radius:5px;padding:5px;display:flex;
 }
 .msj-rta{
-    float:right;background:#001111;
+    float:right;background:#001111;text-align:right;
 }
 .msj{
     float:left;background:#101010;
@@ -37,44 +37,58 @@ body{
     right:40px;
     bottom:40px;
     font-size:15px;
-    width:375px;
-    border-width: 1px 1px 1px 1px;
-    border-color:white;
-    border-top-style: none;
-    border-right-style: solid;
-    border-bottom-style: solid;
-    border-left-style: solid;
-    border-radius:5px;
+    width:125px;
+    border-color: #337ab7 #337ab7 #337ab7 #337ab7;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-radius: 0px 15px 15px 15px;
+    border-style:5px solid ;
+
+    
+}
+
+.panel-primary {
+    background:#000000;
+    height: 40px;
 }
 .panel-heading{
     cursor: pointer;
-    height:50px;
-    padding:17px;
-    background:#000000;
+    padding:25px;
+    background:#337ab7;
 }
+
 .innerframe{
-    height:400px;
+margin-top:20px;
+z-index:1;
+background:#000000;
+    height:450px;
+    opacity:'0';
 }
 .innerframe > div:last-of-type{
-    position:absolute;bottom:05px;width:100%;display:flex;
+position:absolute;
+bottom:10px;
+width:100%;
+display:flex;
 }
 #messages {
+    margin-top: 20px;
     width:100%;
     list-style-type: none;
     padding:18px;
     position:absolute;
-    top:70px;
+    top:40px;
     bottom:50px;
     display:flex;
     flex-direction: column;
     overflow-y:scroll;
-    height: 350px;
+    height: 370px;
 
 }
 .msj:before{
     width: 0;
     height: 0;
     content:"";
+    text-align:right;
     top:-5px;
     left:-14px;
     position:relative;
@@ -97,32 +111,93 @@ input:focus{
     outline: none;
 }        
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    color: #DCDCDC;
+    color: #DCDCD5;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-    color: #DCDCDC;
+    color: #DCDCD5;
 }
 :-ms-input-placeholder { /* IE 10+ */
-    color: #DCDCDC;
+    color: #DCDCD5;
 }
 :-moz-placeholder { /* Firefox 18- */
-    color: #DCDCDC;
+    color: #DCDCD5;
  }
+#chat-panel{
+text-align:center;
+}
+
+
+
 body{
 font-family: "Trebuchet MS";
 font-size:15px;
 background:url('http://cdn.wonderfulengineering.com/wp-content/uploads/2014/07/Hi-Tech-Wallpaper-12.jpg');
 background-repeat: repeat-x;
 background-size:140%;
-background-position:-500px; 
+background-position:-500px -100px;
+overflow:hidden; 
 }
 
 #myHref{
-margin-top:100px;
+z-index:1;
 decoration:none;
-padding:10px;
-background-color: lightblue;
+padding:40px;
+position:relative;
+top:250px;
+left:25%;
+width:100px;
+height:100px;
+background:black;
 }
 #include{
-margin-top:10px;
+position:absolute;
+left:5%;
+top:30%;
+}
+h2{
+position:absolute;
+top:150px;
+left:10%;
+}
+#closeOp{
+z-index:2;
+position:absolute;
+left:55%;
+top:100px;
+opacity:0.7;
+}
+#closeOp:active,#closeOp:hover{
+opacity:1;
+background:grey;
+width:70px;
+}
+
+
+::-webkit-scrollbar {
+z-index:-1;
+margin-top:50px;
+width: 20px;
+background: black; 
+}
+small{
+font-type:Italic;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+
+    border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px black;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: silver; 
+    box-shadow: inset 0 0 5px black;
 }

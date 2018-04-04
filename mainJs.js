@@ -90,6 +90,7 @@ function queryBot(text) {
                 data: JSON.stringify({ query: text, lang: "en", sessionId: SESSIONID }),
                 
 		success: function(data) {
+		    displayOutput(data.result.fulfillment.displayText);
                     insertChat("remote",data.result.fulfillment.speech);
                 },
                 error: function() {
@@ -124,4 +125,12 @@ $("#closeOp").click(function(){
 	$("#myData").hide();
 	$("#myHref").show();
 });
+function displayOutput(input){
+if (input === 'LOAD-PAGE'){
+        document.getElementById("myData").setAttribute('data','D:/Guna/POCs/ML/nwave-UI/output.html');
+	$("#myData").show();
+	$("#myHref").hide();
+	$("#closeOp").show();
+     }
+}
 

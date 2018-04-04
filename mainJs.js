@@ -127,7 +127,7 @@ $("#closeOp").click(function(){
 });
 function displayOutput(input){
 if (input === 'LOAD-PAGE'){
-        document.getElementById("myData").setAttribute('data','D:/Guna/POCs/ML/nwave-UI/output.html');
+        document.getElementById("myData").setAttribute('data',url);
 	$("#myData").show();
 	$("#myHref").hide();
 	$("#closeOp").show();

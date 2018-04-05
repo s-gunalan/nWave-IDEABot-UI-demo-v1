@@ -112,6 +112,7 @@ function generateUUID() { // Public Domain/MIT
 
 $(document).ready(function(){
     $("#myHref").click(function(event){
+	$("#loading").show();
         document.getElementById("myData").setAttribute('data',url);
 	$("#myData").show();
 	$("#myHref").hide();
@@ -124,6 +125,7 @@ $("#closeOp").click(function(){
 	$("#closeOp").hide();	
 	$("#myData").hide();
 	$("#myHref").show();
+	
 });
 function displayOutput(input){
 if (input === 'LOAD-PAGE'){
@@ -131,6 +133,7 @@ if (input === 'LOAD-PAGE'){
 	$("#myData").show();
 	$("#myHref").hide();
 	$("#closeOp").show();
+	
      }
 }
 

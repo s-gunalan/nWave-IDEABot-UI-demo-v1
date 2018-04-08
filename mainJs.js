@@ -50,20 +50,23 @@ function insertChat(who, text){
 $("#chat-panel").on('click',function(){
 var framewidth = $("#frame").width();
 var op="";
-if(framewidth > 150 ){
-	framewidth = "125";
+if(framewidth > 200 ){
+	framewidth = "175";
 	op="0.1";
+	
 }else {
 	framewidth = "370";
 	op="1";
+	
 }
-$(".innerframe").animate({height: 'toggle',opacity: op});
+$(".innerframe").animate({height:'toggle',opacity: op});
 $('#frame').animate({ width: framewidth,background:"black"});
 });
  
 function resetChat(){
     $("#messages").empty();
 }
+
 
 $(".mytext").on("keyup", function(e){
     if (e.which == 13){
@@ -112,8 +115,8 @@ function generateUUID() { // Public Domain/MIT
 
 $(document).ready(function(){
     $("#myHref").click(function(event){
-	$("#loading").show();
-        document.getElementById("myData").setAttribute('data',url);
+//document.getElementById("myData").setAttribute('data',url);
+document.getElementById("myData").setAttribute('data','file:///D:/Guna/POCs/ML/nwave-UI/output.html');
 	$("#myData").show();
 	$("#myHref").hide();
 	$("#closeOp").show();
@@ -121,19 +124,46 @@ $(document).ready(function(){
     });
 });
 $("#closeOp").click(function(){
+	$("#loading").hide();
 	document.getElementById("myData").setAttribute('data',"");
 	$("#closeOp").hide();	
 	$("#myData").hide();
 	$("#myHref").show();
-	
 });
 function displayOutput(input){
 if (input === 'LOAD-PAGE'){
-        document.getElementById("myData").setAttribute('data',url);
+//document.getElementById("myData").setAttribute('data',url);
+document.getElementById("myData").setAttribute('data','https://nwave-ideabot-flask-webhook-p.herokuapp.com/getop/TESTINPUT1');
 	$("#myData").show();
 	$("#myHref").hide();
-	$("#closeOp").show();
-	
-     }
+	$("#closeOp").show();}
 }
+$(function () {
+    var body = $('#myHref');
+    var backgrounds = [
+      'url(https://gcn.com/articles/2017/04/06/~/media/GIG/GCN/Redesign/Articles/2017/April/AIrobot.png)',
+      'url(https://marketingland.com/wp-content/ml-loads/2017/09/AI1920-1-800x450.png)',
+'url(http://crazzfiles.com/wp-content/uploads/2015/10/artificial-intelligence-617x416.jpg)',
+'url(https://techinwire.com/wp-content/uploads/2017/07/dcx_doc6q01z349m08qrpwz2sd.jpg)',
+'url(http://www.cellphoneage.com/media/magpleasure/mpblog/post_thumbnail_file/5/0/cache/1/ece9a24a761836a70934a998c163f8c8/50e2975740b22aa588236eb17342dcaf.jpeg)',
+'url(http://www.innovationmanagement.se/wp-content/uploads/2016/10/artificial-intelligence-digital-transformation.png)',
+];
+    var current = 0;
 
+    function nextBackground() {
+        body.css(
+            'background',
+        backgrounds[current = ++current % backgrounds.length]);
+
+        setTimeout(nextBackground, 3500);
+    }
+    setTimeout(nextBackground, 3500);
+    body.css('background', backgrounds[0]);
+});
+ $("#menu").click(function () {
+    if ($(this).find("img").attr("data-state") == "static") {
+      $(this).find("img").attr("src", "https://digitalsynopsis.com/wp-content/uploads/2015/10/gif-icons-menu-transition-animations-dancing-icon.gif");
+    } else {
+      $(this).find("img").attr("src", "https://cdn1.iconfinder.com/data/icons/cool-cirlce/128/menu.png");
+    }
+  });

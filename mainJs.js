@@ -115,8 +115,8 @@ function generateUUID() { // Public Domain/MIT
 
 $(document).ready(function(){
     $("#myHref").click(function(event){
-//document.getElementById("myData").setAttribute('data',url);
-document.getElementById("myData").setAttribute('data','file:///D:/Guna/POCs/ML/nwave-UI/output.html');
+document.getElementById("myData").setAttribute('data',url);
+//document.getElementById("myData").setAttribute('data','file:///D:/Guna/POCs/ML/nwave-UI/output.html');
 	$("#myData").show();
 	$("#myHref").hide();
 	$("#closeOp").show();
@@ -132,8 +132,8 @@ $("#closeOp").click(function(){
 });
 function displayOutput(input){
 if (input === 'LOAD-PAGE'){
-//document.getElementById("myData").setAttribute('data',url);
-document.getElementById("myData").setAttribute('data','https://nwave-ideabot-flask-webhook-p.herokuapp.com/getop/TESTINPUT1');
+document.getElementById("myData").setAttribute('data',url);
+//document.getElementById("myData").setAttribute('data','https://nwave-ideabot-flask-webhook-p.herokuapp.com/getop/TESTINPUT1');
 	$("#myData").show();
 	$("#myHref").hide();
 	$("#closeOp").show();}

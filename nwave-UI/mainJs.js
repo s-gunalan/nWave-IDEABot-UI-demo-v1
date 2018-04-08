@@ -50,8 +50,8 @@ function insertChat(who, text){
 $("#chat-panel").on('click',function(){
 var framewidth = $("#frame").width();
 var op="";
-if(framewidth > 150 ){
-	framewidth = "125";
+if(framewidth > 200 ){
+	framewidth = "175";
 	op="0.1";
 	
 }else {
@@ -115,8 +115,8 @@ function generateUUID() { // Public Domain/MIT
 
 $(document).ready(function(){
     $("#myHref").click(function(event){
-document.getElementById("myData").setAttribute('data',url);
-//document.getElementById("myData").setAttribute('data','file:///D:/Guna/POCs/ML/nwave-UI/output.html');
+//document.getElementById("myData").setAttribute('data',url);
+document.getElementById("myData").setAttribute('data','file:///D:/Guna/POCs/ML/nwave-UI/output.html');
 	$("#myData").show();
 	$("#myHref").hide();
 	$("#closeOp").show();
@@ -132,8 +132,8 @@ $("#closeOp").click(function(){
 });
 function displayOutput(input){
 if (input === 'LOAD-PAGE'){
-document.getElementById("myData").setAttribute('data',url);
-//document.getElementById("myData").setAttribute('data','https://nwave-ideabot-flask-webhook-p.herokuapp.com/getop/TESTINPUT1');
+//document.getElementById("myData").setAttribute('data',url);
+document.getElementById("myData").setAttribute('data','https://nwave-ideabot-flask-webhook-p.herokuapp.com/getop/TESTINPUT1');
 	$("#myData").show();
 	$("#myHref").hide();
 	$("#closeOp").show();}
@@ -160,3 +160,10 @@ $(function () {
     setTimeout(nextBackground, 3500);
     body.css('background', backgrounds[0]);
 });
+ $("#menu").click(function () {
+    if ($(this).find("img").attr("data-state") == "static") {
+      $(this).find("img").attr("src", "https://digitalsynopsis.com/wp-content/uploads/2015/10/gif-icons-menu-transition-animations-dancing-icon.gif");
+    } else {
+      $(this).find("img").attr("src", "https://cdn1.iconfinder.com/data/icons/cool-cirlce/128/menu.png");
+    }
+  });

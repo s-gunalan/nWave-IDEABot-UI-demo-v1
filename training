@@ -13,8 +13,8 @@
 </div>
 <img id="menu"></img>
 <div id="description">
-IDEA is the nWave Augmented Estimation Tool – which will be used to estimate Integration & BPM related work.<br>
-This tool is based on the <strong>“IPM standardized Integration & BPM estimation template”</strong> that exists currently in the xls format.
+IDEA is the nWave Augmented Estimation Tool â€“ which will be used to estimate Integration & BPM related work.<br>
+This tool is based on the <strong>â€œIPM standardized Integration & BPM estimation templateâ€</strong> that exists currently in the xls format.
 </div>	
 <div id="steps">
 <table>
@@ -52,7 +52,7 @@ This tool is based on the <strong>“IPM standardized Integration & BPM estimation
     </div>
    </div>
   </div>
-<p id="footer"><br><small>© 2018 Cognizant EAS-IPM.</small></p></font>
+<p id="footer"><br><small>Â© 2018 Cognizant EAS-IPM.</small></p></font>
 <a id="closeOp" style="display:none">Close X</a>
 <div id="include">
 	<object type="text/html" id="myData" width="850px" height="650px" style="border:none">

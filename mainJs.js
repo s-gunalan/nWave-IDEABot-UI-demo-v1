@@ -95,6 +95,8 @@ function queryBot(text) {
 		success: function(data) {
 		    displayOutput(data.result.fulfillment.displayText);
                     insertChat("remote",data.result.fulfillment.speech);
+			var msg = new SpeechSynthesisUtterance(data.result.fulfillment.speech);
+            		window.speechSynthesis.speak(msg);
                 },
                 error: function() {
                     insertChat("remote","Sorry Bot has faced some issues! Please try again later");

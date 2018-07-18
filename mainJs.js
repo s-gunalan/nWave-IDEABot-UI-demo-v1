@@ -80,8 +80,7 @@ $(".mytext").on("keyup", function(e){
 });
 function buttonclick(text){
 insertChat("local", text);              
-$(".mytext").val('');
-queryBot(text)
+queryBot(text);
 }
 resetChat();
 
